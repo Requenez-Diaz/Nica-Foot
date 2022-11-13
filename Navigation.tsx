@@ -8,7 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 //screens
 
 import Home from "./src/screen/Profile";
-import FavoriteScreen from "./src/screen/Home";
+import FavoriteScreen from "./src/screen/HomeScreen";
 import ScreenAdd from "./src/screen/ScreenAdd";
 import NotificationScreen from "./src/screen/Favorite";
 import ProfileScreen from "./src/screen/ScreenNotification"; 
@@ -18,6 +18,7 @@ import { Feather } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import HomeScreen from './src/screen/HomeScreen';
 
 const HomeStackNaviagator = createNativeStackNavigator();
 
@@ -36,12 +37,12 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "red",
+        tabBarActiveTintColor: "blue",
       }}
     >
       <Tab.Screen
         name="Busca tu comida favorite"
-        component={Home}
+        component={HomeScreen}
         options={{
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
