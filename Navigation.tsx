@@ -8,17 +8,19 @@ import { NavigationContainer } from "@react-navigation/native";
 //screens
 
 import Home from "./src/screen/Profile";
-import FavoriteScreen from "./src/screen/HomeScreen";
+import Favorite from "./src/screen/Favorite";
 import ScreenAdd from "./src/screen/ScreenAdd";
 import NotificationScreen from "./src/screen/Favorite";
-import ProfileScreen from "./src/screen/ScreenNotification"; 
+import ProfileScreen from "./src/screen/ScreenNotification";
 
 //Use Icon
 import { Feather } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import HomeScreen from './src/screen/HomeScreen';
+import HomeScreen from "./src/screen/HomeScreen";
+import { View } from "react-native";
 
 const HomeStackNaviagator = createNativeStackNavigator();
 
@@ -37,13 +39,34 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "blue",
+        tabBarActiveTintColor: "pink",
       }}
     >
       <Tab.Screen
-        name="Busca tu comida favorite"
+        name="Dashboard"
         component={HomeScreen}
         options={{
+          headerStyle: {
+            backgroundColor: "#f45133",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "Cochin",
+            fontWeight: "bold",
+            fontSize: 25,
+          },
+          headerLeft: () => (
+            <View style={{ paddingLeft: 10, marginLeft: 10 }}>
+              <Feather name="menu" size={24} color="white" />
+            </View>
+          ),
+          headerRight: () => (
+            <View style={{ paddingRight: 10, marginRight: 10 }}>
+              <AntDesign name="search1" size={24} color="white" />
+            </View>
+          ),
+
+          headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <Feather name="home" size={24} color={color} />
@@ -53,8 +76,18 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Favorites food"
-        component={FavoriteScreen}
+        component={Favorite}
         options={{
+          headerStyle: {
+            backgroundColor: "#f45133",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "Cochin",
+            fontWeight: "bold",
+            fontSize: 25,
+          },
+          headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <Fontisto name="favorite" size={24} color={color} />
@@ -66,6 +99,16 @@ function MyTabs() {
         name="Add"
         component={ScreenAdd}
         options={{
+          headerStyle: {
+            backgroundColor: "#f45133",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "Cochin",
+            fontWeight: "bold",
+            fontSize: 25,
+          },
+          headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="add-circle" size={35} color="gray" />
@@ -77,6 +120,16 @@ function MyTabs() {
         name="Notification"
         component={NotificationScreen}
         options={{
+          headerStyle: {
+            backgroundColor: "#f45133",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "Cochin",
+            fontWeight: "bold",
+            fontSize: 25,
+          },
+          headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="notifications" size={24} color={color} />
@@ -84,13 +137,24 @@ function MyTabs() {
           headerShown: true,
         }}
       />
-      <Tab.Screen 
-        name="Mi perfil" 
+      <Tab.Screen
+        name="Mi perfil"
         component={ProfileScreen}
         options={{
+          headerStyle: {
+            backgroundColor: "#f45133",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "Cochin",
+            fontWeight: "bold",
+            fontSize: 25,
+          },
+          headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="user" size={24} color={color} />
+            
           ),
           headerShown: true,
         }}
