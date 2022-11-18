@@ -1,12 +1,12 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
 
+const Slider = () => {
+  return (
+    <View>
+      <Text>Slider</Text>
+    </View>
+  );
+};
 
-const Slider = (props) => {
-    return (
-        <View>
-            <Text>hola {props.name}!</Text>
-        </View>
-    );
-
-}
+export default Slider;

@@ -1,8 +1,13 @@
+import Search from "./Search";
+import Slider from "./Slider";
+import { View } from "react-native";
 
-import Search from "./Search"
 const ContainerComponents = () => {
-    return (
-        <Search/>
-    )
-}
+  return (
+    <View>
+      <Search />
+      <Slider/>
+    </View>
+  );
+};
 export default ContainerComponents;
