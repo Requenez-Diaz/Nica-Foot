@@ -1,10 +1,13 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const Search = () => {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.welcome}>
         <Text style={styles.txt}>Welcome Melissa!</Text>
+        <Image source={{ uri: "https://img.europapress.es/fotoweb/fotonoticia_20200221191003_420.jpg" }} 
+        style={styles.img}
+         />
       </View>
     </View>
   );
@@ -22,5 +25,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     color: "gray",
+  },
+  welcome: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginBottom: 5,
+  },
+  img: {
+    width: 30,
+    height: 30,
+    borderRadius: 20
   }
 });

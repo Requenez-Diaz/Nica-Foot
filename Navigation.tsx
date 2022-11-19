@@ -20,7 +20,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import HomeScreen from "./src/screen/HomeScreen";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 
 const HomeStackNaviagator = createNativeStackNavigator();
 
@@ -57,19 +57,23 @@ function MyTabs() {
           },
           headerLeft: () => (
             <View style={{ paddingLeft: 10, marginLeft: 10 }}>
-              <Feather name="menu" size={24} color="white" />
+              <TouchableOpacity>
+                <Feather name="menu" size={24} color="white" />
+              </TouchableOpacity>
             </View>
           ),
           headerRight: () => (
-            <View style={{ paddingRight: 10, marginRight: 10 }}>
-              <AntDesign name="search1" size={24} color="white" />
-            </View>
+            <TouchableOpacity>
+              <View style={{ paddingRight: 10, marginRight: 10 }}>
+                <AntDesign name="search1" size={24} color="white" />
+              </View>
+            </TouchableOpacity>
           ),
 
           headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="home" size={24} color={color} />
+            <Feather name="home" size={24} color={color} /> 
           ),
           headerShown: true,
         }}
@@ -83,7 +87,6 @@ function MyTabs() {
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontFamily: "Cochin",
             fontWeight: "bold",
             fontSize: 25,
           },
@@ -104,7 +107,6 @@ function MyTabs() {
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontFamily: "Cochin",
             fontWeight: "bold",
             fontSize: 25,
           },
@@ -125,7 +127,6 @@ function MyTabs() {
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontFamily: "Cochin",
             fontWeight: "bold",
             fontSize: 25,
           },
@@ -146,7 +147,6 @@ function MyTabs() {
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontFamily: "Cochin",
             fontWeight: "bold",
             fontSize: 25,
           },
@@ -154,7 +154,6 @@ function MyTabs() {
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="user" size={24} color={color} />
-            
           ),
           headerShown: true,
         }}
