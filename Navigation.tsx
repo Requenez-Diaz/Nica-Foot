@@ -20,6 +20,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import HomeScreen from "./src/screen/HomeScreen";
+import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableOpacity, View } from "react-native";
 
 const HomeStackNaviagator = createNativeStackNavigator();
@@ -39,7 +40,8 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "pink",
+        tabBarActiveTintColor: "#ffffff",
+        tabBarActiveBackgroundColor: "#f45154",
       }}
     >
       <Tab.Screen
@@ -113,7 +115,7 @@ function MyTabs() {
           headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add-circle" size={35} color="gray" />
+            <FontAwesome5 name="map-marker-alt" size={24} color={color} />
           ),
           headerShown: true,
         }}

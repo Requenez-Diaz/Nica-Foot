@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
     alignContent: "center",
     margin: 10,
     padding: 10,
+    backgroundColor: "#ffa07a",
+    borderRadius: 10
   },
   txt: {
     fontWeight: "bold",
@@ -30,10 +32,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     marginBottom: 5,
+    alignItems: "center"
   },
   img: {
-    width: 30,
-    height: 30,
-    borderRadius: 20
+    width: 35,
+    height: 35,
+    borderRadius: 20,
   }
 });
