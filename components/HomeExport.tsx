@@ -6,7 +6,7 @@ const HomeExport = () => {
     return (
         <ScrollView>
             <View>
-                <ContainerComponents />
+                <ContainerComponents/>
             </View>
         </ScrollView>
     )
