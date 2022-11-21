@@ -1,32 +1,30 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
 interface Props {
-  url: string;
+  image: {};
 }
 
-const Slider = ({ url }: Props) => {
+const Slider = ({ image }: Props) => {
   return (
+
     <View style={styles.container2}>
-      <View style={styles.direction}>
+      <View>
         <Image
-          source={{
-            uri: url,
-          }}
+          source={image}
           style={styles.img}
         />
       </View>
     </View>
+
   );
 };
 
 export default Slider;
 const styles = StyleSheet.create({
   container2: {
-    flex: 1,
-    flexDirection: "row",
     margin: 2,
-    padding: 2
+    padding: 10
   },
   img: {
     width: "100%",
@@ -34,10 +32,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10
+    borderBottomRightRadius: 10,
   },
-  direction: {
-    flex: 1,
-    flexDirection: "row",
-  }
 });

@@ -101,7 +101,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Add"
+        name="Maps"
         component={ScreenAdd}
         options={{
           headerStyle: {
