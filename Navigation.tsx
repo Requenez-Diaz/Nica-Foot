@@ -53,7 +53,6 @@ function MyTabs() {
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontFamily: "Cochin",
             fontWeight: "bold",
             fontSize: 25,
           },

@@ -11,7 +11,7 @@ const RestaurantDescription = () => {
     return (
 
         <View style={styles.container}>
-            <View>
+            <View style={styles.Space}>
                 <Text style={styles.txt}>Bar la toña</Text>
                 <View
                     style={styles.count}>
@@ -37,21 +37,27 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 10,
+        paddingTop:10
     },
     txt: {
         fontSize: 25,
         textAlign: 'center',
         fontWeight: 'bold'
-
     },
     txt1: {
         fontSize: 20,
         fontWeight: 'normal',
         marginLeft: 15,
-        color: 'gray'
+        color: 'gray',
+        margin: 2
     },
     count: {
         flex: 1,
         flexDirection: 'row',
+    },
+    Space:{
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
+        paddingBottom: 10
     }
 })
