@@ -3,7 +3,7 @@ import * as React from 'react';
 import MapView from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Marker, Callout, Circle} from 'react-native-maps'
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+
 
 
 export default function Maps() {
@@ -14,18 +14,7 @@ export default function Maps() {
 
     return (
         <View style={styles.container}>
-            {/* <GooglePlacesAutocomplete
-            placeholder='search'
-            onPress={(data, details = null) => {
-                console.log(data,details)
-            }}
-            query={{
-                key: 'key',
-                language: 'en',
-
-            }}
-            /> */}
-            <MapView
+            <MapView style={styles.map}
                 initialRegion={{
                     longitude: -84.45651111024087,
                     latitude: 11.684712793063719,
