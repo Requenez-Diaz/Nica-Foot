@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-
+import { SafeAreaView } from "react-native";
 //://www.youtube.com/watch?v=WMOPvJot0yI
 
 //screens
@@ -37,6 +37,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
+
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
@@ -74,7 +75,7 @@ function MyTabs() {
           headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="home" size={24} color={color} /> 
+            <Feather name="home" size={24} color={color} />
           ),
           headerShown: true,
         }}

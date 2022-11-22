@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
     Space:{
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
-        paddingBottom: 10
+        paddingBottom: 10   
     }
 })
