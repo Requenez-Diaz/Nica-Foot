@@ -7,11 +7,10 @@ import { SafeAreaView } from "react-native";
 
 //screens
 
-import Home from "./src/screen/Profile";
 import Favorite from "./src/screen/Favorite";
 import ScreenAdd from "./src/screen/ScreenAdd";
-import NotificationScreen from "./src/screen/Favorite";
-import ProfileScreen from "./src/screen/ScreenNotification";
+import ScreenNotification from "./src/screen/ScreenNotification";
+import Profile from "./src/screen/Profile";
 
 //Use Icon
 import { Feather } from "@expo/vector-icons";
@@ -23,12 +22,13 @@ import HomeScreen from "./src/screen/HomeScreen";
 import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableOpacity, View } from "react-native";
 
+
 const HomeStackNaviagator = createNativeStackNavigator();
 
 function Tacks() {
   return (
     <HomeStackNaviagator.Navigator initialRouteName="Home">
-      <HomeStackNaviagator.Screen name="Home" component={Home} />
+      <HomeStackNaviagator.Screen name="Home" component={HomeScreen} />
     </HomeStackNaviagator.Navigator>
   );
 }
@@ -122,7 +122,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Notification"
-        component={NotificationScreen}
+        component={ScreenNotification}
         options={{
           headerStyle: {
             backgroundColor: "#f45133",
@@ -142,7 +142,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Mi perfil"
-        component={ProfileScreen}
+        component={Profile}
         options={{
           headerStyle: {
             backgroundColor: "#f45133",

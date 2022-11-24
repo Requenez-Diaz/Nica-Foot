@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 const Category = () => {
     return (
         <ScrollView>
-            <View  >
+            <View>
                 <Text style={styles.title}>Categorias</Text>
                 <View style={styles.container}>
                     <View style={styles.imagen}>

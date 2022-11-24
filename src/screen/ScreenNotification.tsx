@@ -1,8 +1,8 @@
 import React from "react";
 
-const Notification = () => {
+const ScreenNotification = () => {
     return (
         <></>
     )
 }
-export default Notification;
+export default ScreenNotification;
