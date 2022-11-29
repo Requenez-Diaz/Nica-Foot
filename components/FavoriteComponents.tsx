@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Favorite from "./favorites/Favorite";
+import InventarioLista from "./favorites/InventarioLista";
 
 const FavoriteComponent= () => {
     return ( 
         <View>
-            <Favorite/>
+            <InventarioLista/>
         </View>
     )
 }

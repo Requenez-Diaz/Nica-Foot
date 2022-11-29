@@ -4,7 +4,7 @@ import FavoriteComponent from "../../components/FavoriteComponents";
 
 const Favorite = () => {
     return (
-        <View style={{backgroundColor: 'blue'}}>
+        <View>
             <FavoriteComponent/>
         </View>
     )

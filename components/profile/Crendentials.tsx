@@ -33,7 +33,7 @@ const Credentials = () => {
         </View>
     )
 }
-
+//https://youtu.be/ALnJLbjI7EY
 export default Credentials;
 
 const styles = StyleSheet.create({
