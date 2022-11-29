@@ -13,10 +13,10 @@ const InventarioItem = (Props) => (
 
 const Styles = StyleSheet.create({
   container: {
-    backgroundColor:'#8ed1fc',
+    backgroundColor:'#ffe4b5',
     margin:15,
     padding: 20,
-    borderRadius:5,
+    borderRadius:7,
     paddingVertical: 5,
   },
 

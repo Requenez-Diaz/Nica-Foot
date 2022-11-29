@@ -29,7 +29,7 @@ const parseThousands = (value: number) => {
         </View>
         <View>
           <Text style={{textAlign: 'center', color: '#FFB533', fontWeight: 'bold' }} >Ventas Diarias</Text>
-          <Text style={{textAlign: 'center', color: '#33DDFF', fontWeight: 'bold' }} >{parseThousands(ventasDiarias)}</Text>
+          <Text style={{textAlign: 'center', color: '#33DD', fontWeight: 'bold' }} >{parseThousands(ventasDiarias)}</Text>
         </View >
         <View>
           <Text style={{textAlign: 'center', color: 'green', fontWeight: 'bold' }} >Precio</Text>

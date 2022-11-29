@@ -1,6 +1,6 @@
 export default [
     {
-      nombre: "Gallo Pinto",
+      nombre: "Dynasty",
       telefono: 86749874,
       nombreMedicamento: "Completo",
       id: 834445,
@@ -11,10 +11,10 @@ export default [
       precio: 75,
       vencidas: 10,
       ownerAvatarUrl:
-        "https://www.recetas-nicaragua.com/base/stock/Recipe/119-image/119-image_web.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0b/e7/4b/e3/week.jpg",
     },
     {
-      nombre: "Farmacia BotiMarket",
+      nombre: "Imperial Loung",
       id: 469399,
       nombreMedicamento: "Bitaflenaco",
       description: "Lo mejor contra el dolor de cabeza, y fiebre",
@@ -24,10 +24,10 @@ export default [
       precio: 6,
       vencidas: 10,
       ownerAvatarUrl:
-        "https://www.paginasamarillas.com.pe/imagenes/pe/images/ad_id_6794/logo.png",
+        "https://lh5.googleusercontent.com/p/AF1QipMczssqSRjcVgpLefAtr1P5p87tOqlRQbGAXaeG=w500-h500-k-no",
     },
     {
-      nombre: "Farmacia Algorta",
+      nombre: "Papua Colon",
       id: 8344545,
       nombreMedicamento: "Vital Fuerte",
       description: "Para la gripa",
@@ -37,10 +37,10 @@ export default [
       precio: 8,
       vencidas: 10,
       ownerAvatarUrl:
-        "https://i.pinimg.com/originals/13/d8/c0/13d8c087ffb9d0921d9007a5ee26df66.jpg",
+        "https://madriddiferente.com/wp-content/uploads/2021/01/PAPUA-inspirado-en-la-Papua-Nueva-Guinea.jpg",
     },
     {
-      nombre: "Farmacia Gi",
+      nombre: "Restaurante la vervena",
       id: 7488909,
       nombreMedicamento: "Dolovitalgia",
       description: "Gripe y tos",
@@ -50,10 +50,10 @@ export default [
       precio: 5.5,
       vencidas: 10,
       ownerAvatarUrl:
-        "https://lh3.googleusercontent.com/p/AF1QipPNiXZG6f3yDS1tJ7NaE_K_yjpci1hIAc7CNVG6=w1080-h608-p-no-v0",
+        "https://images01.casanica.com/514/923/5149230000IN/26df2bf15419689846f7fe4036c43fbb.jpg",
     },
     {
-      nombre: "Farmacia Ahorro",
+      nombre: "Hotel sixties",
       id: 8344456,
       nombreMedicamento: "Diclofenac",
       description: "Para el dolor de cabeza",
@@ -62,7 +62,7 @@ export default [
       ventasDiarias: 400,
       precio: 7,
       vencidas: 12,
-      ownerAvatarUrl: 'https://www.farmaciasdelahorro.hn/src/img/faWeb/logos/logo-principal.png'
+      ownerAvatarUrl: 'https://www.hotelsixties.com/content/imgsxml/galerias/panel_galeriaslider/1/restaurante-twist-barcelona-1279.jpg'
     },
   ];
   

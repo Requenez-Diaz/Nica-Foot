@@ -44,8 +44,8 @@ interface Props {
       paddingVertical: 5,
     },
     image: {
-      width: 48,
-      height: 48,
+      width: 70,
+      height: 70,
       borderRadius: 4,
     },
     container2: {
@@ -53,7 +53,7 @@ interface Props {
       padding: 5,
       color: "blue",
       alignSelf: "flex-start",
-      backgroundColor: "#ffeb3b",
+      backgroundColor: "#ffeb",
       borderRadius: 3,
       overflow: "hidden",
     },
