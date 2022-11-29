@@ -8,7 +8,7 @@ const InventarioLista = () => {
     <FlatList
       data={Inventario}
       ItemSeparatorComponent={() => <Text> </Text>}
-      renderItem={({ item: inve }) => <InventarioItem {...inve} />} 
+      renderItem={({ item: inve }) => <InventarioItem {...inve} />}
     />
   );
 };

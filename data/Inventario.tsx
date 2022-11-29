@@ -2,9 +2,9 @@ export default [
     {
       nombre: "Dynasty",
       telefono: 86749874,
-      nombreMedicamento: "Completo",
+      Tiposervicio: "Completo",
       id: 834445,
-      description: "Lo mejor contra el dolor",
+      description: "Ofrecemos el mejor servicio, en alimentacion como las estadia",
       totalesDiarias: 3,
       inventarioActual: 300,
       ventasDiarias: 500,
@@ -16,8 +16,8 @@ export default [
     {
       nombre: "Imperial Loung",
       id: 469399,
-      nombreMedicamento: "Bitaflenaco",
-      description: "Lo mejor contra el dolor de cabeza, y fiebre",
+      Tiposervicio: "Completo",
+      description: "Ofrecemos el mejor servicio, en alimentacion como las estadia",
       totalesDiarias: 2,
       inventarioActual: 6300,
       ventasDiarias: 5000,
@@ -29,7 +29,7 @@ export default [
     {
       nombre: "Papua Colon",
       id: 8344545,
-      nombreMedicamento: "Vital Fuerte",
+      Tiposervicio: "Completo",
       description: "Para la gripa",
       totalesDiarias: 3,
       inventarioActual: 300,
@@ -42,8 +42,8 @@ export default [
     {
       nombre: "Restaurante la vervena",
       id: 7488909,
-      nombreMedicamento: "Dolovitalgia",
-      description: "Gripe y tos",
+      Tiposervicio: "Completo",
+      description: "Ofrecemos el mejor servicio, en alimentacion como las estadia",
       totalesDiarias: 3,
       inventarioActual: 300,
       ventasDiarias: 500,
@@ -55,8 +55,8 @@ export default [
     {
       nombre: "Hotel sixties",
       id: 8344456,
-      nombreMedicamento: "Diclofenac",
-      description: "Para el dolor de cabeza",
+      Tiposervicio: "Completo",
+      description: "Ofrecemos el mejor servicio, en alimentacion como las estadia",
       totalesDiarias: 1,
       inventarioActual: 3500,
       ventasDiarias: 400,

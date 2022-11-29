@@ -6,11 +6,11 @@ interface Props {
     ownerAvatarUrl: string;
     nombre: string;
     id?: string;
-    nombreMedicamento: string;
+    Tiposervicio: string;
     description?: string;
   }
   
-  const InventarioHeader = ({ ownerAvatarUrl, nombre, id, nombreMedicamento, description, }: Props)  => {
+  const InventarioHeader = ({ ownerAvatarUrl, nombre, id, Tiposervicio, description, }: Props)  => {
     return(
       <View>
           <View style={{ flexDirection: "row", paddingBottom: 6 }}>
@@ -23,7 +23,7 @@ interface Props {
                 <StylesText estilo="vencidas" children={id} type="ID" />
                 <StylesText
                 estilo="vencidas"
-                children={nombreMedicamento}
+                children={Tiposervicio}
                 type="Tipo servicio"
                 />
                 <Text>Descripcion: {description}</Text>
