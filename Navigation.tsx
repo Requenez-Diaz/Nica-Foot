@@ -80,7 +80,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Favorites food"
+        name="Stores "
         component={Favorite}
         options={{
           headerStyle: {
