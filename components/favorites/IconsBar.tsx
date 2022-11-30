@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { AntDesign } from '@expo/vector-icons';
 
 const IconsBar = () => { 
 
     return (
-      <View>
+      <View style={styles.container}>
         <TouchableOpacity
         style={styles.boton}
         >
-            <Text>Edit Inventario</Text>
+            <Text style={styles.txt}>Edit Inventario</Text>
         </TouchableOpacity>
-        <View>
-
+        <View style={styles.icon}>
+        <AntDesign name="downcircle" size={24} color="black" />
         </View>
       </View>
     )
@@ -21,10 +22,32 @@ const IconsBar = () => {
 export default IconsBar
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    paddingTop: 20
+  },
     boton: {
-        backgroundColor: 'orange',
-        width: 70,
-        height: 30,
-        
+        backgroundColor: 'skyblue', 
+        width: 100,
+        height: 40,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    txt: {
+      fontWeight: 'bold',
+      fontSize: 15,
+    },
+    icon:{
+      width: 40,
+      height: 40,
+      backgroundColor : 'gray',
+      borderRadius: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 5
     }
 })

@@ -3,13 +3,12 @@ import { View, Text, StyleSheet } from 'react-native';
 //Import Icons
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons';
 
 
 const RestaurantDescription = () => {
 
     return (
-
         <View style={styles.container}>
             <View style={styles.Space}>
                 <Text style={styles.txt}>Bar la toña</Text>
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 10,
-        paddingTop:10
+        paddingTop: 10
     },
     txt: {
         fontSize: 25,
@@ -55,9 +54,9 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
     },
-    Space:{
+    Space: {
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
-        paddingBottom: 10   
+        paddingBottom: 10
     }
 })

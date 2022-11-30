@@ -11,14 +11,13 @@ import Favorite from "./src/screen/Favorite";
 import ScreenAdd from "./src/screen/ScreenAdd";
 import ScreenNotification from "./src/screen/ScreenNotification";
 import Profile from "./src/screen/Profile";
-
+import HomeScreen from "./src/screen/HomeScreen";
 //Use Icon
 import { Feather } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import HomeScreen from "./src/screen/HomeScreen";
 import { FontAwesome5 } from '@expo/vector-icons';
 import { TouchableOpacity, View } from "react-native";
 
@@ -95,7 +94,7 @@ function MyTabs() {
           headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
-            <Fontisto name="favorite" size={24} color={color} />
+            <Ionicons name="ios-restaurant-sharp" size={24} color={color} />
           ),
           headerShown: true,
         }}
@@ -121,7 +120,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Notification"
+        name="Clientes"
         component={ScreenNotification}
         options={{
           headerStyle: {
@@ -135,7 +134,7 @@ function MyTabs() {
           headerTitleAlign: "center",
           tabBarLabel: "",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="notifications" size={24} color={color} />
+            <FontAwesome5 name="users" size={24} color={color} />
           ),
           headerShown: true,
         }}
