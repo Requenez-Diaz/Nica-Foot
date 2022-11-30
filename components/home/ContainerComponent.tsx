@@ -4,10 +4,10 @@ import Index from './Index';
 import RestaurantDescription from './RestaurantDescription';
 import Description from "./Description";
 import Category from "./Category";
+import MoreCat from "./MoreCat";
 
 const ContainerComponents = () => {
   return (
-    <ScrollView>
       <View>
         <View style={{ backgroundColor: 'green' }}>
           <Search />
@@ -17,10 +17,9 @@ const ContainerComponents = () => {
           <RestaurantDescription />
           <Description />
           <Category />
+          <MoreCat/>
         </View>
       </View>
-
-    </ScrollView>
   );
 };
 export default ContainerComponents;
