@@ -5,20 +5,23 @@ import RestaurantDescription from './RestaurantDescription';
 import Description from "./Description";
 import Category from "./Category";
 import MoreCat from "./MoreCat";
+import ProductsCat from "./ProductsCat";
 
 const ContainerComponents = () => {
   return (
       <View>
-        <View style={{ backgroundColor: 'green' }}>
+        <View style={{ backgroundColor: 'rgb(38, 50, 56)' }}>
           <Search />
           <Index />
         </View>
-        <View style={{ backgroundColor: 'pink', borderTopLeftRadius: 40, borderTopRightRadius: 40 }}>
+        <View style={{ backgroundColor: 'rgb(38, 50, 56)', opacity: 1 }}>
           <RestaurantDescription />
           <Description />
           <Category />
           <MoreCat/>
+          <ProductsCat />
         </View>
+
       </View>
   );
 };

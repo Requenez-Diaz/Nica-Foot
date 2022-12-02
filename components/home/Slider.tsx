@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 
 interface Props {
   image: {};
@@ -7,16 +7,11 @@ interface Props {
 
 const Slider = ({ image }: Props) => {
   return (
-
     <View style={styles.container2}>
       <View>
-        <Image
-          source={image}
-          style={styles.img}
-        />
+        <Image source={image} style={styles.img} />
       </View>
     </View>
-
   );
 };
 
@@ -24,7 +19,7 @@ export default Slider;
 const styles = StyleSheet.create({
   container2: {
     margin: 2,
-    padding: 10
+    padding: 10,
   },
   img: {
     width: "100%",

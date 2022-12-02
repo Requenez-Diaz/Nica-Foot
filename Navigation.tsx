@@ -12,15 +12,15 @@ import ScreenAdd from "./src/screen/ScreenAdd";
 import ScreenNotification from "./src/screen/ScreenNotification";
 import Profile from "./src/screen/Profile";
 import HomeScreen from "./src/screen/HomeScreen";
+import Login from "./src/screen/Login";
 //Use Icon
 import { Feather } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome5 } from "@expo/vector-icons";
 import { TouchableOpacity, View } from "react-native";
-
 
 const HomeStackNaviagator = createNativeStackNavigator();
 
@@ -36,7 +36,6 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
@@ -44,6 +43,12 @@ function MyTabs() {
         tabBarActiveBackgroundColor: "#f45154",
       }}
     >
+      {/* <Tab.Screen
+      name= "Inicia sesion here"
+      component={Login}
+      options={{
+      }}
+      /> */}
       <Tab.Screen
         name="Dashboard"
         component={HomeScreen}
@@ -99,6 +104,7 @@ function MyTabs() {
           headerShown: true,
         }}
       />
+
       <Tab.Screen
         name="Maps"
         component={ScreenAdd}
