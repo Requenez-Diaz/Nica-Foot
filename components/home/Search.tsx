@@ -23,13 +23,14 @@ const styles = StyleSheet.create({
     alignContent: "center",
     margin: 10,
     padding: 10,
-    backgroundColor: "#ffa07a",
+    backgroundColor: 'gray',
     borderRadius: 10,
+    opacity: 0.5
   },
   txt: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "gray",
+    color: "white",
   },
   welcome: {
     flexDirection: "row",

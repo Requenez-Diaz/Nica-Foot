@@ -4,7 +4,7 @@ import ComponentsProfile from "./profile/ComponentsProfile";
 
 const ContainerProfile = () =>{
     return(
-        <View>
+        <View style={{ backgroundColor: "rgb(38, 50, 56)" }}>
             <ComponentsProfile/>
         </View>
     )
