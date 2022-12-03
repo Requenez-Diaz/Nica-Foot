@@ -1,5 +1,5 @@
 import React from "react";
-import { View,ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import Header from "./favorites/Header";
 import InventarioLista from "./favorites/InventarioLista";
 import Search from "./favorites/Search";
@@ -8,19 +8,15 @@ import IconSelect from "./favorites/IconSelect";
 
 const FavoriteComponent = () => {
   return (
-
-    <View>
+    <View style={{ backgroundColor: "rgb(38, 50, 56)" }}>
       <Search />
       <ScrollView>
-        <View>
-          <Header />
-          <IconsBar />
-          <IconSelect/>
-          <InventarioLista />
-        </View>
+        <Header />
+        <IconsBar />
+        <IconSelect />
+        <InventarioLista />
       </ScrollView>
     </View>
-
   );
 };
 

@@ -1,11 +1,12 @@
 import Search from "./Search";
-import { ScrollView, View } from "react-native";
+import {View } from "react-native";
 import Index from './Index';
 import RestaurantDescription from './RestaurantDescription';
 import Description from "./Description";
 import Category from "./Category";
 import MoreCat from "./MoreCat";
 import ProductsCat from "./ProductsCat";
+import Tendencias from "./Tendencias";
 
 const ContainerComponents = () => {
   return (
@@ -20,6 +21,7 @@ const ContainerComponents = () => {
           <Category />
           <MoreCat/>
           <ProductsCat />
+          <Tendencias />
         </View>
 
       </View>

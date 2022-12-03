@@ -55,6 +55,7 @@ function MyTabs() {
         options={{
           headerStyle: {
             backgroundColor: "#f45133",
+            opacity: 0.5,
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
@@ -68,6 +69,7 @@ function MyTabs() {
               </TouchableOpacity>
             </View>
           ),
+
           headerRight: () => (
             <TouchableOpacity>
               <View style={{ paddingRight: 10, marginRight: 10 }}>
@@ -85,7 +87,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Stores "
+        name="Stores"
         component={Favorite}
         options={{
           headerStyle: {

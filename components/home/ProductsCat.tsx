@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     height: 50,
     paddingHorizontal: 40,
     alignItems: "center",
-    backgroundColor: 'rgb(38, 50, 56)',
+    backgroundColor: "rgb(38, 50, 56)",
   },
   footerText: {
     color: "#ffff",

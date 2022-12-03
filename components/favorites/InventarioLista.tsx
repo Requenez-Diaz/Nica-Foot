@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, FlatList } from "react-native";
-import Inventario from "../../data/Inventario"
+import Inventario from "../../data/Inventario";
 import InventarioItem from "./InventarioItem";
 
 const InventarioLista = () => {
