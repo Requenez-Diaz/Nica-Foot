@@ -2,7 +2,7 @@ import react from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 const Category = () => {
-   /* A function that returns a JSX element. */
+    /* A function that returns a JSX element. */
     return (
         <ScrollView>
             <View>

@@ -2,16 +2,15 @@ import { Text, View, ScrollView } from "react-native";
 import Populares from "./clientes/Populares";
 import Recomendados from "./clientes/Recomendados";
 import Sesion from "./clientes/Sesion";
+import HeaderList from "./clientes/HeaderList";
 
 const ClientesContainer = () => {
   return (
-    <ScrollView>
-      <View style={{ backgroundColor: "rgb(38, 50, 56)" }}>
+    <View style={{ flex: 1 }}>
         <Sesion />
         <Populares />
-        <Recomendados />
-      </View>
-    </ScrollView>
+      <HeaderList />
+    </View>
   );
 };
 

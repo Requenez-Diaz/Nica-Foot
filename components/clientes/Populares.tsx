@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   Text,
   View,
@@ -6,7 +6,11 @@ import {
   ScrollView,
   TouchableOpacity,
   Image,
+  FlatList
 } from "react-native";
+
+
+
 
 import { Ionicons } from "@expo/vector-icons";
 const Populares = () => {
@@ -39,10 +43,10 @@ const Populares = () => {
               <Image
                 style={styles.image}
                 source={{
-                  uri: "https://pickaface.net/gallery/avatar/unr_peter_180706_0314_2gugtoc.png",
+                  uri: "https://pickaface.net/gallery/avatar/43828622_161217_1709_cjs5.png",
                 }}
               />
-              <Text>Juan</Text>
+              <Text>Jasson</Text>
             </View>
           </View>
         </View>

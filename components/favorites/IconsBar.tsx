@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 
-const IconsBar = () => { 
+const IconsBar = () => {
 
-    return (
-      <View style={styles.container}>
-        <TouchableOpacity
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity
         style={styles.boton}
-        >
-            <Text style={styles.txt}>Edit Inventario</Text>
-        </TouchableOpacity>
-        <View style={styles.icon}>
+      >
+        <Text style={styles.txt}>Edit Inventario</Text>
+      </TouchableOpacity>
+      <View style={styles.icon}>
         <AntDesign name="downcircle" size={24} color="black" />
-        </View>
       </View>
-    )
+    </View>
+  )
 
 }
 
@@ -29,25 +29,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 20
   },
-    boton: {
-        backgroundColor: 'skyblue', 
-        width: 100,
-        height: 40,
-        borderRadius: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    txt: {
-      fontWeight: 'bold',
-      fontSize: 15,
-    },
-    icon:{
-      width: 40,
-      height: 40,
-      backgroundColor : 'gray',
-      borderRadius: 10,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginLeft: 5
-    }
+  boton: {
+    backgroundColor: 'skyblue',
+    width: 100,
+    height: 40,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  txt: {
+    fontWeight: 'bold',
+    fontSize: 15,
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'gray',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 5
+  }
 })

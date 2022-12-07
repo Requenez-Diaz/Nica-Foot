@@ -25,6 +25,8 @@ export default function Maps() {
       />
       <MapView
         style={styles.map}
+        minZoomLevel={10}
+        maxZoomLevel={20}
         initialRegion={{
           longitude: -84.45651111024087,
           latitude: 11.684712793063719,
