@@ -7,7 +7,6 @@ import Category from "./Category";
 import MoreCat from "./MoreCat";
 import ProductsCat from "./ProductsCat";
 import Tendencias from "./Tendencias";
-import ContenCat from "./ContenCat";
 
 const ContainerComponents = () => {
   return (
@@ -20,7 +19,6 @@ const ContainerComponents = () => {
           <MoreCat/>
           <ProductsCat />
           <Tendencias />
-          <ContenCat/>
         </View>
   );
 };

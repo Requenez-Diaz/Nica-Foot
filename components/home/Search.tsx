@@ -21,16 +21,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
+    backgroundColor: 'black',
+    borderRadius: 10,
+    opacity: 0.5,
     margin: 10,
     padding: 10,
-    backgroundColor: 'gray',
-    borderRadius: 10,
-    opacity: 0.5
   },
   txt: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "white",
+    color: "black",
   },
   welcome: {
     flexDirection: "row",

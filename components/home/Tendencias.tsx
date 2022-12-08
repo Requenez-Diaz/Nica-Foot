@@ -17,7 +17,7 @@ const Tendencias = () => {
       >
         <View style={styles.tendencias}>
           <TendenImg
-            avatar={{ uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg" }}
+            avatar={{ uri: "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg" }}
             name='carlos'
           />
           <TendenImg
