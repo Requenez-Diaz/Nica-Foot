@@ -4,14 +4,13 @@ import { Ionicons } from "@expo/vector-icons";
 const Category = () => {
   /* A function that returns a JSX element. */
   return (
-    <ScrollView>
-      <View>
+    <View>
       <Text style={styles.title}>Categorias</Text>
-        <ScrollView
+      <ScrollView
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
-        >
+      >
         <View style={styles.container}>
           <View style={styles.imagen}>
             <Text style={styles.txt}>Fritangas</Text>
@@ -76,18 +75,16 @@ const Category = () => {
               />
               <Text style={{ fontSize: 14, color: "#fffff" }}>20-45 mn</Text>
             </View>
-              <Image
-                source={{
-                  uri: "https://assets.unileversolutions.com/recipes-v2/99420.png",
-                }}
-                style={styles.img}
-              />
+            <Image
+              source={{
+                uri: "https://assets.unileversolutions.com/recipes-v2/99420.png",
+              }}
+              style={styles.img}
+            />
           </View>
         </View>
-
-        </ScrollView>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 export default Category;
@@ -110,7 +107,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     textAlign: "center",
-    color: 'white'
+    color: "white",
   },
   imagen: {
     width: 170,
@@ -118,7 +115,7 @@ const styles = StyleSheet.create({
     backgroundColor: "gray",
     borderRadius: 25,
     alignItems: "center",
-    margin: 10
+    margin: 10,
   },
   img: {
     width: 140,
@@ -133,7 +130,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 15,
     margin: 5,
-    color: 'white'
+    color: "white",
   },
   timer: {
     flexDirection: "row",

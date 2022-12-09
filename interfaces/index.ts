@@ -1,6 +1,7 @@
-export interface Client {
+export interface Clients {
+    id: string;
+    name: string;
     image: string
-    name: string
     follow: number
     stores: number
 }
@@ -16,8 +17,8 @@ export interface Populares {
     image: string,
     name: string
 }
-export interface Inventario {
-    id: string,
+export interface Inventary {
+    id: string
     name: string
     service: number
     description: string
@@ -27,13 +28,18 @@ export interface Inventario {
     price: number
     disponible: number
 }
+export interface Place {
+    id: string
+    img: string
+}
+
 interface Metadata {
     nextPage: number
     currentPage: number
     perPage: number
 }
 export interface ListClientsResponse {
-    data: [Client] | []
+    data: [Clients] | []
     metadata: Metadata
 }
 
@@ -46,6 +52,10 @@ export  interface ListPopularesResponse {
     metadata: Metadata
 }
 export interface ListInventarioResponse {
-    data: [Inventario] | []
+    data: [Inventary] | []
+    metadata: Metadata
+}
+export interface ListPlaceResponse {
+    data: [Place] | []
     metadata: Metadata
 }

@@ -6,12 +6,12 @@ import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 
-const RestaurantDescription = () => {
+const Information = () => {
 
     return (
-        <View style={styles.container}>
+        <View>
+            <Text style={styles.txt}>Bar la toña</Text>
             <View style={styles.Space}>
-                <Text style={styles.txt}>Bar la toña</Text>
                 <View
                     style={styles.count}>
                     <Feather name="phone-call" size={24} color="white" />
@@ -30,14 +30,9 @@ const RestaurantDescription = () => {
     )
 }
 
-export default RestaurantDescription;
+export default Information;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        margin: 10,
-        paddingTop: 10
-    },
     txt: {
         fontSize: 25,
         textAlign: 'center',
@@ -56,6 +51,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     Space: {
+        flex: 1,
+        margin: 10,
+        paddingTop: 10,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
         paddingBottom: 10

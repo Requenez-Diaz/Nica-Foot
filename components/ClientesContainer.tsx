@@ -7,8 +7,8 @@ import HeaderList from "./clientes/HeaderList";
 const ClientesContainer = () => {
   return (
     <View style={{ flex: 1 }}>
-        <Sesion />
-        <Populares />
+      <Sesion />
+      <Populares />
       <HeaderList />
     </View>
   );

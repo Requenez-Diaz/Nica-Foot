@@ -5,12 +5,11 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  Image
 } from "react-native";
 
 const Morecat = () => {
   return (
-    <View style={styles.container}>
+    <View >
       <View style={styles.scroll}>
         <ScrollView horizontal={true} >
           <TouchableOpacity>
@@ -40,13 +39,13 @@ export default Morecat;
 
 const styles = StyleSheet.create({
   container: {
+  
+  },
+  scroll: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    paddingTop: 10,
-  },
-  scroll: {
-    margin: 20
+    margin: 10
   },
   txt1: {
     justifyContent: "center",
