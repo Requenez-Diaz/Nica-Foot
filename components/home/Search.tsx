@@ -21,16 +21,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
-    backgroundColor: 'black',
+    backgroundColor: 'gray',
     borderRadius: 10,
-    opacity: 0.5,
     margin: 10,
     padding: 10,
   },
   txt: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "black",
+    color: "white",
   },
   welcome: {
     flexDirection: "row",
@@ -39,8 +38,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   img: {
-    width: 35,
-    height: 35,
+    width: 40,
+    height: 40,
     borderRadius: 20,
   },
 });

@@ -1,4 +1,3 @@
-
 import {
   Text,
   View,
@@ -6,50 +5,52 @@ import {
   ScrollView,
   TouchableOpacity,
   Image,
-  FlatList
+  FlatList,
 } from "react-native";
 
+import { HttpClient } from "../../services/http.service";
+import { ListPopularesResponse } from "../../interfaces";
+import { useState, useEffect } from "react";
 
+const populares = new HttpClient();
 
-
-import { Ionicons } from "@expo/vector-icons";
 const Populares = () => {
+  const [popular, setPopular] = useState<ListPopularesResponse>({
+    data: [],
+    metadata: {
+      nextPage: 1,
+      currentPage: 1,
+      perPage: 1,
+    },
+  });
+  const getPopulares = async () => {
+    const response = await populares.get<ListPopularesResponse>("Populares");
+    setPopular(response);
+    console.log(response);
+  };
+
+  useEffect(() => {
+    getPopulares();
+  }, []);
   return (
     <View>
       <Text style={styles.text}> Clientes populares</Text>
       <ScrollView horizontal={true}>
-        <View style={styles.container}>
-          <View style={styles.container2}>
-            <View style={styles.conten}>
-              <TouchableOpacity>
-                <Ionicons name="add-circle-outline" size={100} color="gray" />
-              </TouchableOpacity>
-              <Text>Add new Client</Text>
+        {popular.data.map((populares, index) => (
+          <View style={styles.container} key={index}>
+            <View style={styles.container2}>
+              <View style={styles.conten}>
+                <Image
+                  style={styles.image}
+                  source={{
+                    uri: populares.image,
+                  }}
+                />
+                <Text> {populares.name}</Text>
+              </View>
             </View>
           </View>
-          <View style={styles.container2}>
-            <View style={styles.conten}>
-              <Image
-                style={styles.image}
-                source={{
-                  uri: "https://pickaface.net/gallery/avatar/43828622_161217_1709_cjs5.png",
-                }}
-              />
-              <Text>Jasson</Text>
-            </View>
-          </View>
-          <View style={styles.container2}>
-            <View style={styles.conten}>
-              <Image
-                style={styles.image}
-                source={{
-                  uri: "https://pickaface.net/gallery/avatar/43828622_161217_1709_cjs5.png",
-                }}
-              />
-              <Text>Jasson</Text>
-            </View>
-          </View>
-        </View>
+        ))}
       </ScrollView>
     </View>
   );

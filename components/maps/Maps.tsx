@@ -3,12 +3,34 @@ import MapView from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { Marker, Callout, Circle } from "react-native-maps";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import { HttpClient } from "../../services/http.service";
+import { ListMapsResponse } from "../../interfaces";
+import { useState, useEffect } from "react";
+
+
+const maps = new HttpClient();
 
 export default function Maps() {
   const [pin, setPin] = React.useState({
     longitude: -84.45651111024087,
     latitude: 11.684712793063719,
   });
+
+  const [places, setPlace] = useState<ListMapsResponse>({
+    data: [],
+    metadata: {
+      nextPage: 1,
+      currentPage: 1,
+      perPage: 1,
+    },
+  });
+  const getPlaces = async () => {
+    const response = await maps.get<ListMapsResponse>("places");
+    setPlace(response);
+  };
+  useEffect(() => {
+    getPlaces();
+  }, []);
 
   /* The above code is a React component that renders a map. */
   return (

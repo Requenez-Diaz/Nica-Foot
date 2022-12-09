@@ -17,16 +17,16 @@ const Category = () => {
             <Text style={styles.txt}>Fritangas</Text>
             <View style={styles.Icon}>
               <Text style={styles.name}>Enchiladas</Text>
-              <Ionicons name="ios-star" size={24} color="yellow" />
+              <Ionicons name="ios-star" size={24} color="white" />
             </View>
             <View style={styles.timer}>
               <Ionicons
                 name="timer-outline"
                 size={20}
-                color="gray"
+                color="white"
                 style={{ margin: 5 }}
               />
-              <Text style={{ fontSize: 14, color: "gray" }}>20-45 mn</Text>
+              <Text style={{ fontSize: 14, color: "white" }}>20-45 mn</Text>
             </View>
             <View>
               <Image
@@ -65,7 +65,7 @@ const Category = () => {
             <Text style={styles.txt}>Fritangas</Text>
             <View style={styles.Icon}>
               <Text style={styles.name}>Tacos</Text>
-              <Ionicons name="ios-star" size={24} color="yellow" />
+              <Ionicons name="ios-star" size={24} color="white" />
             </View>
             <View style={styles.timer}>
               <Ionicons
@@ -74,7 +74,7 @@ const Category = () => {
                 color="gray"
                 style={{ margin: 5 }}
               />
-              <Text style={{ fontSize: 14, color: "gray" }}>20-45 mn</Text>
+              <Text style={{ fontSize: 14, color: "#fffff" }}>20-45 mn</Text>
             </View>
               <Image
                 source={{
@@ -110,11 +110,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     textAlign: "center",
+    color: 'white'
   },
   imagen: {
     width: 170,
     height: 270,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "gray",
     borderRadius: 25,
     alignItems: "center",
     margin: 10
@@ -132,6 +133,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 15,
     margin: 5,
+    color: 'white'
   },
   timer: {
     flexDirection: "row",

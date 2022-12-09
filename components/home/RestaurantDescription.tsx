@@ -14,15 +14,15 @@ const RestaurantDescription = () => {
                 <Text style={styles.txt}>Bar la toña</Text>
                 <View
                     style={styles.count}>
-                    <Feather name="phone-call" size={24} color="black" />
+                    <Feather name="phone-call" size={24} color="white" />
                     <Text style={styles.txt1}>+505 8646 9676</Text>
                 </View>
                 <View style={styles.count} >
-                    <MaterialCommunityIcons name="google-maps" size={24} color="black" />
+                    <MaterialCommunityIcons name="google-maps" size={24} color="white" />
                     <Text style={styles.txt1}>Nueva Guinea</Text>
                 </View>
                 <View style={styles.count} >
-                    <FontAwesome5 name="facebook" size={24} color="black" />
+                    <FontAwesome5 name="facebook" size={24} color="white" />
                     <Text style={styles.txt1}>BarlaToña</Text>
                 </View>
             </View>
@@ -41,13 +41,14 @@ const styles = StyleSheet.create({
     txt: {
         fontSize: 25,
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'white'
     },
     txt1: {
         fontSize: 20,
         fontWeight: 'normal',
         marginLeft: 15,
-        color: 'gray',
+        color: 'white',
         margin: 2
     },
     count: {

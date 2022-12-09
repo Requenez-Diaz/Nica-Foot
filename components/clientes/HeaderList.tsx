@@ -4,6 +4,8 @@ import Clientes from '../../data/Clientes'
 import ItemHeader from './ItemHeader'
 
 const HeaderList = () => {
+    
+
     return (
         <FlatList
             data={Clientes}

@@ -1,5 +1,5 @@
 const baseUrl = 'http://localhost:3000';
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAxR0tKVFlHVjFERVhQM0NLNFFRNE1IR1FDIiwiaWF0IjoxNjcwMzAwNzgzLCJleHAiOjE2NzY3NjYxOTV9.obvXARvjiySepwTyZ5kpaYzSIfinl_K9fas7K0OT7Bw"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAxR0tTMVdFR0FaUTFCNkVBQkVZUFA3WjI3IiwiaWF0IjoxNjcwNTA5Mzg0LCJleHAiOjYxNjcwNTA5Mzg0fQ.Qzxrb3MHhQMU3e4SjtEVqI5OB1N0SJAdXRN4dPGLtvk"
 
 export class HttpClient {
    async get<T>(endPoint = "nicafoot") {

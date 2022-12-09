@@ -71,10 +71,7 @@ const Recomendados = () => {
           </TouchableOpacity>
         </View>
       </View>
-      {/* <FlatList
-      data={clients.data}
-      renderItem={renderItem}/>
-      /> */}
+
     </View>
   );
 };

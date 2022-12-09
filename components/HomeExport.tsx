@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native';
 const HomeExport = () => { 
     return (
         <ScrollView>
-            <View>
+            <View style={{backgroundColor: "rgb(38, 50, 56)"}}>
                 <ContainerComponents/>
             </View>
         </ScrollView>
