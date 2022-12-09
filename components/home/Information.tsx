@@ -4,28 +4,52 @@ import { View, Text, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { useState, useEffect } from 'react';
+import { HttpClient } from "../../services/http.service";
+import { ListInformationResponse } from "../../interfaces";
+
+const information = new HttpClient();
+
 
 
 const Information = () => {
+    const [infor, setInfor] = useState<ListInformationResponse>({
+        data: [],
+        metadata: {
+          nextPage: 1,
+          currentPage: 1,
+          perPage: 1,
+        },
+    });
+    const getInformation = async () => {
+        const response = await information.get<ListInformationResponse>("Information");
+        setInfor(response);
+      };
+      useEffect(() => {
+        getInformation();
+      }, []);
+    
 
     return (
         <View>
-            <Text style={styles.txt}>Bar la toña</Text>
-            <View style={styles.Space}>
+            {infor.data.map((information, index) => (
+            <View style={styles.Space} key={index}>
+                <Text style={styles.txt}>{information.namePlaces}</Text>
                 <View
                     style={styles.count}>
                     <Feather name="phone-call" size={24} color="white" />
-                    <Text style={styles.txt1}>+505 8646 9676</Text>
+                    <Text style={styles.txt1}>{information.numberPhone}</Text>
                 </View>
                 <View style={styles.count} >
                     <MaterialCommunityIcons name="google-maps" size={24} color="white" />
-                    <Text style={styles.txt1}>Nueva Guinea</Text>
+                    <Text style={styles.txt1}>{information.places}</Text>
                 </View>
                 <View style={styles.count} >
                     <FontAwesome5 name="facebook" size={24} color="white" />
-                    <Text style={styles.txt1}>BarlaToña</Text>
+                    <Text style={styles.txt1}>{information.socialmedia}</Text>
                 </View>
             </View>
+               ))}
         </View>
     )
 }

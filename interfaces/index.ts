@@ -32,6 +32,21 @@ export interface Place {
     id: string
     img: string
 }
+export interface Information {
+    id: string,
+    namePlaces: string,
+    numberPhone: number,
+    places: string
+    socialmedia: string
+}
+export interface Category {
+    id: string
+    name: string,
+    description: string
+    product: string
+    date: number
+    avatar: string
+}
 
 interface Metadata {
     nextPage: number
@@ -57,5 +72,15 @@ export interface ListInventarioResponse {
 }
 export interface ListPlaceResponse {
     data: [Place] | []
+    metadata: Metadata
+}
+
+export interface ListInformationResponse {
+    data: [Information] | []
+    metadata: Metadata
+}
+
+export interface ListCategoryResponse {
+    data: [Category] | []
     metadata: Metadata
 }

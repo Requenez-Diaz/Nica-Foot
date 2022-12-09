@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
   },
   scrollView: {
-    marginTop: 15,
+    marginTop: 10,
   },
 });

@@ -1,8 +1,29 @@
 import react from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+
+import { useState, useEffect } from "react";
+import { HttpClient } from "../../services/http.service";
+import { ListCategoryResponse } from "../../interfaces";
+
+const categories = new HttpClient();
+
 const Category = () => {
-  /* A function that returns a JSX element. */
+  const [category, setCategory] = useState<ListCategoryResponse>({
+    data: [],
+    metadata: {
+      nextPage: 1,
+      currentPage: 1,
+      perPage: 1,
+    },
+  });
+  const getCategory = async () => {
+    const response = await categories.get<ListCategoryResponse>("categories");
+    setCategory(response);
+  };
+  useEffect(() => {
+    getCategory();
+  }, []);
   return (
     <View>
       <Text style={styles.title}>Categorias</Text>
@@ -11,78 +32,36 @@ const Category = () => {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.container}>
-          <View style={styles.imagen}>
-            <Text style={styles.txt}>Fritangas</Text>
-            <View style={styles.Icon}>
-              <Text style={styles.name}>Enchiladas</Text>
-              <Ionicons name="ios-star" size={24} color="white" />
-            </View>
-            <View style={styles.timer}>
-              <Ionicons
-                name="timer-outline"
-                size={20}
-                color="white"
-                style={{ margin: 5 }}
-              />
-              <Text style={{ fontSize: 14, color: "white" }}>20-45 mn</Text>
-            </View>
-            <View>
-              <Image
-                source={{
-                  uri: "https://assets.unileversolutions.com/recipes-v2/99420.png",
-                }}
-                style={styles.img}
-              />
-            </View>
-          </View>
-          <View style={styles.imagen}>
-            <Text style={styles.txt}>Fritangas</Text>
-            <View style={styles.Icon}>
-              <Text style={styles.name}>Tacos</Text>
-              <Ionicons name="ios-star" size={24} color="yellow" />
-            </View>
-            <View style={styles.timer}>
-              <Ionicons
-                name="timer-outline"
-                size={20}
-                color="gray"
-                style={{ margin: 5 }}
-              />
-              <Text style={{ fontSize: 14, color: "gray" }}>20-45 mn</Text>
-            </View>
-            <View>
-              <Image
-                source={{
-                  uri: "https://assets.unileversolutions.com/recipes-v2/99420.png",
-                }}
-                style={styles.img}
-              />
+        {category.data.map((categories, index) => (
+          <View style={styles.container} key={index}>
+            <View style={styles.imagen}>
+              <Text style={styles.txt}>{categories.name}</Text>
+              <View style={styles.Icon}>
+                <Text style={styles.name}>{categories.description}</Text>
+                <Ionicons name="ios-star" size={24} color="white" />
+              </View>
+              <View style={styles.timer}>
+                <Ionicons
+                  name="timer-outline"
+                  size={20}
+                  color="white"
+                  style={{ margin: 5 }}
+                />
+                <Text style={{ fontSize: 14, color: "white" }}>
+                  {categories.date}
+                </Text>
+              </View>
+              <View>
+                <Image
+                  source={{
+                    uri: categories.avatar,
+                  }}
+                  style={styles.img}
+                />
+              </View>
             </View>
           </View>
-          <View style={styles.imagen}>
-            <Text style={styles.txt}>Fritangas</Text>
-            <View style={styles.Icon}>
-              <Text style={styles.name}>Tacos</Text>
-              <Ionicons name="ios-star" size={24} color="white" />
-            </View>
-            <View style={styles.timer}>
-              <Ionicons
-                name="timer-outline"
-                size={20}
-                color="gray"
-                style={{ margin: 5 }}
-              />
-              <Text style={{ fontSize: 14, color: "#fffff" }}>20-45 mn</Text>
-            </View>
-            <Image
-              source={{
-                uri: "https://assets.unileversolutions.com/recipes-v2/99420.png",
-              }}
-              style={styles.img}
-            />
-          </View>
-        </View>
+        ))}
       </ScrollView>
     </View>
   );

@@ -66,7 +66,7 @@ export default function ProductsCat() {
         // viewabilityConfig={viewConfigRef}
         // onViewableItemsChanged={onViewRef.current}
       />
-      <View style={styles.doView}>
+      {/* <View style={styles.doView}>
         {carruselItems.map(({}, index: number) => (
           <TouchableOpacity
             key={index.toString()}
@@ -76,7 +76,7 @@ export default function ProductsCat() {
             ]}
           />
         ))}
-      </View>
+      </View> */}
     </View>
   );
 }
