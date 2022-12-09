@@ -11,6 +11,8 @@ export interface Maps {
     description: string
     latitude: number
     longitude: number
+    latitudeDelta: number
+    longitudeDelta: number
 }
 export interface Populares {
     id: string,

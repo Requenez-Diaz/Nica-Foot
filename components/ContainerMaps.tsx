@@ -3,7 +3,9 @@ import Maps from './maps/Maps';
 
 const ContainerMaps = () => {
     return (
-        <></>
+        <>
+        <Maps />
+        </>
     )
 }
 

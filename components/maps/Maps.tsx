@@ -7,14 +7,30 @@ import { HttpClient } from "../../services/http.service";
 import { ListMapsResponse } from "../../interfaces";
 import { useState, useEffect } from "react";
 
-
 const maps = new HttpClient();
 
 export default function Maps() {
-  const [pin, setPin] = React.useState({
-    longitude: -84.45651111024087,
-    latitude: 11.684712793063719,
-  });
+  const restaurantes = [
+    {
+      id: 1,
+      name: "Restaurante el buen sabor",
+      description:
+        "El mejor y único restaurante de comida china en nueva guinea",
+      longlat: { latitude: 11.689895, longitude: -84.45213 },
+    },
+    {
+      id: 2,
+      name: "El palacio del café",
+      description: "El mejor lugar para disfrutar de tu bebida favorite",
+      longlat: { latitude: 11.699561, longitude: -84.452268 },
+    },
+    {
+      id: 3,
+      name: "La parrilla del chef",
+      description: "Asados y sopas de mariscos",
+      longlat: { latitude: 11.690181, longitude: -84.453514 },
+    },
+  ];
 
   const [places, setPlace] = useState<ListMapsResponse>({
     data: [],
@@ -35,47 +51,23 @@ export default function Maps() {
   /* The above code is a React component that renders a map. */
   return (
     <View style={styles.container}>
-      <GooglePlacesAutocomplete
-        placeholder="search"
-        onPress={(data, details = null) => {
-          console.log(data, details);
-        }}
-        query={{
-          key: "googleApi",
-          language: "es",
-        }}
-      />
       <MapView
         style={styles.map}
-        minZoomLevel={10}
+        minZoomLevel={5}
         maxZoomLevel={20}
-        initialRegion={{
-          longitude: -84.45651111024087,
-          latitude: 11.684712793063719,
-          longitudeDelta: 23.4396,
-          latitudeDelta: 4.9668,
+        region={{
+          latitude: 11.689892,
+          longitude: -84.45213,
+          latitudeDelta: 0.01,
+          longitudeDelta: 0.01,
         }}
-        provider="google"
       >
-        <Marker
-          coordinate={pin}
-          pinColor="black"
-          draggable={true}
-          onDragStart={(e) => {
-            console.log("Start", e.nativeEvent.coordinate);
-          }}
-          onDragEnd={(e) => {
-            setPin({
-              longitude: e.nativeEvent.coordinate.longitude,
-              latitude: e.nativeEvent.coordinate.latitude,
-            });
-          }}
-        >
-          <Callout>
-            <Text>Im here</Text>
-          </Callout>
-        </Marker>
-        <Circle center={pin} radius={1000} />
+        {places.data.map((gmaps, index) => (
+          <Marker
+          key={index}
+            coordinate={gmaps}
+          />
+        ))}
       </MapView>
     </View>
   );
@@ -84,12 +76,10 @@ export default function Maps() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+
   },
   map: {
-    width: Dimensions.get("screen").width,
-    height: Dimensions.get("screen").height,
+    width: "100%",
+    height: "100%",
   },
 });
