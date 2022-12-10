@@ -4,7 +4,30 @@ import React from "react";
 import TendenciasProps from "./TendenciasProps";
 import TendenImg from "./TendenImg";
 
+import { HttpClient } from "../../services/http.service";
+import { ListTendenciaResponse } from "../../interfaces";
+import {useState, useEffect} from 'react'
+
+const tendencias = new HttpClient();
+
 const Tendencias = () => {
+  const [tenden, setTenden] = useState<ListTendenciaResponse>({
+    data: [],
+    metadata: {
+      nextPage: 1,
+      currentPage: 1,
+      perPage: 1,
+    },
+  });
+  const getTendencias = async () => {
+    const response = await tendencias.get<ListTendenciaResponse>("Tendencias");
+    setTenden(response);
+    console.log(response);
+  };
+
+  useEffect(() => {
+    getTendencias();
+  }, []);
   return (
     <ScrollView>
       <TendenciasProps title="Tendencias" />
@@ -13,50 +36,34 @@ const Tendencias = () => {
         showsHorizontalScrollIndicator={false}
         style={styles.scrollView}
       >
-        <View style={styles.tendencias}>
+        {tenden.data.map((tendencias, index) => (
+        <View style={styles.tendencias} key={index}>
           <TendenImg
             avatar={{
-              uri: "https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg",
+              uri: tendencias.image
             }}
-            name="carlos"
+            name= {tendencias.nameProduct}
           />
           <TendenImg
             avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
+              uri: "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/04/pollo-asado-al-horno.jpg",
             }}
-            name="carlos"
+            name="Pollo asado"
           />
           <TendenImg
             avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
+              uri: "https://t1.rg.ltmcdn.com/es/posts/7/4/9/arroz_con_pollo_ecuatoriano_56947_orig.jpg",
             }}
-            name="carlos"
+            name="Arroz"
           />
           <TendenImg
             avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
+              uri: "https://thumbs.dreamstime.com/b/londres-reino-unido-de-enero-botella-cristal-fr%C3%ADa-bebida-coca-cola-con-hielo-y-roc%C3%ADo-en-blanco-se-produce-la-manufact-108098777.jpg",
             }}
-            name="carlos"
-          />
-          <TendenImg
-            avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
-            }}
-            name="carlos"
-          />
-          <TendenImg
-            avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
-            }}
-            name="carlos"
-          />
-          <TendenImg
-            avatar={{
-              uri: "https://ep00.epimg.net/elpais/imagenes/2021/10/05/album/1633449011_402027_1633454467_album_normal.jpg",
-            }}
-            name="carlos"
+            name="Coca cola"
           />
         </View>
+         ))}
       </ScrollView>
     </ScrollView>
   );

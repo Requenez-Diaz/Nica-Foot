@@ -8,7 +8,9 @@ import IconSelect from "./favorites/IconSelect";
 
 const FavoriteComponent = () => {
   return (
+    <View style={{ backgroundColor: "rgb(38, 50, 56)"}}>
       <InventarioLista />
+    </View>
   );
 };
 

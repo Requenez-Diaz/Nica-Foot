@@ -15,7 +15,7 @@ interface Props {
       <View>
           <View style={{ flexDirection: "row", paddingBottom: 6 }}>
             <View style={{ paddingRight: 10 }}>
-              <Image style={Styles.image} source={{ uri: ownerAvatarUrl }} />
+              <Image style={Styles.image} source={{uri: ownerAvatarUrl }} />
             </View>
             <View style={{ flex: 1 }}>
                 <Text style={Styles.container2}>Nombre Restaurante</Text>

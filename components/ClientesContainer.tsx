@@ -6,7 +6,7 @@ import HeaderList from "./clientes/HeaderList";
 
 const ClientesContainer = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1,  backgroundColor: "rgb(38, 50, 56)" }}>
       <Sesion />
       <Populares />
       <HeaderList />

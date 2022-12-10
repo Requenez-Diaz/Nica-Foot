@@ -21,6 +21,7 @@ export interface Populares {
 }
 export interface Inventary {
     id: string
+    image: string
     name: string
     service: number
     description: string
@@ -49,6 +50,12 @@ export interface Category {
     date: number
     avatar: string
 }
+export interface Tendencias {
+    id: string,
+    image: string,
+    nameProduct: string,
+
+}
 
 interface Metadata {
     nextPage: number
@@ -64,7 +71,7 @@ export interface ListMapsResponse {
     data: [Maps] | []
     metadata: Metadata
 }
-export  interface ListPopularesResponse {
+export interface ListPopularesResponse {
     data: [Populares] | []
     metadata: Metadata
 }
@@ -84,5 +91,9 @@ export interface ListInformationResponse {
 
 export interface ListCategoryResponse {
     data: [Category] | []
+    metadata: Metadata
+}
+export interface ListTendenciaResponse {
+    data: [Tendencias] | []
     metadata: Metadata
 }

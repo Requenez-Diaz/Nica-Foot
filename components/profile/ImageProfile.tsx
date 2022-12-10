@@ -6,7 +6,7 @@ const ImageProfile = () => {
         <View style={styles.container}>
             <View style={styles.container2}>
                 <Image
-                    source={{ uri: "https://eloutput.com/app/uploads-eloutput.com/2020/04/loki-marvel.jpg?x=480&y=375&quality=40" }}
+                    source={{ uri: "https://i.pinimg.com/736x/d0/77/cc/d077ccbfeb90669918009c6854b5d6e2.jpg" }}
                     style={styles.image}
                 />
             </View>
